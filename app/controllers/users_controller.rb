@@ -11,6 +11,7 @@ class UsersController < ApplicationController
 
         if@user.save
 
+            session[:userid] = @user.id
             redirect_to @user, notice: "Thank you for signing up to Rabbit!"
         else
 
