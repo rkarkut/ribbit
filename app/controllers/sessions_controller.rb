@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
         
         session[:userid] = user.id
+        redirect_to root_url
     else
         flash[:error] = "Wrong Username or Password."
         redirect_to root_url

@@ -15,4 +15,6 @@ RibbitApp::Application.routes.draw do
 
   root to: 'users#new'
 
+  get 'buddies', to: 'users#buddies', as: 'buddies'
+
 end
